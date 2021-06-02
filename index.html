@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Nav-bar of the page -->
+    <nav class="navbar">
+      <h1>Weather Dashboard</h1>
+    </nav>
+    <div class="main">
+      <div class="left-section">
+        <h2>Search for a City:</h2>
+        <input id="text" type="text" placeholder="City" />
+        <div class="search-btn">
+          <button id="submit-btn">Search</button>
+        </div>
+        <div class="horizontal-line"></div>
+      </div>
+      <div class="right-section">
+        <div class="result">
+          <h2>Denver (<span id="dateToday"></span>)</h2>
+          <div class="details">
+            <p id="temp-m1">Temp:</p>
+            <p id="wind-m1">Wind:</p>
+            <p id="humidity-m1">Humidity:</p>
+            <p id="index-m1">UV Index:</p>
+          </div>
+        </div>
+        <div class="5 day-forecast">
+          <h3>5 Day Forecast:</h3>
+          <div class="cards">
+            <div class="card">
+              <h3><span id="dateToday1"></span></h3>
+              <div class="details">
+                <p id="temp-0">Temp:</p>
+                <p id="wind-0">Wind:</p>
+                <p id="humidity-0">Humidity:</p>
+                <p id="index-0">UV Index:</p>
+              </div>
+            </div>
+            <div class="card">
+              <h3><span id="dateToday"></span></h3>
+              <div class="details">
+                <p id="temp-1">Temp:</p>
+                <p id="wind-1">Wind:</p>
+                <p id="humidity-1">Humidity:</p>
+                <p id="index-1">UV Index:</p>
+              </div>
+            </div>
+            <div class="card">
+              <h3><span id="dateToday"></span></h3>
+              <div class="details">
+                <p id="temp-2">Temp:</p>
+                <p id="wind-2">Wind:</p>
+                <p id="humidity-2">Humidity:</p>
+                <p id="index-2">UV Index:</p>
+              </div>
+            </div>
+            <div class="card">
+              <h3><span id="dateToday"></span></h3>
+              <div class="details">
+                <p id="temp-3">Temp:</p>
+                <p id="wind-3">Wind:</p>
+                <p id="humidity-3">Humidity:</p>
+                <p id="index-3">UV Index:</p>
+              </div>
+            </div>
+            <div class="card">
+              <h3><span id="dateToday"></span></h3>
+              <div class="details">
+                <p id="temp-4">Temp:</p>
+                <p id="wind-4">Wind:</p>
+                <p id="humidity-4">Humidity:</p>
+                <p id="index-4">UV Index:</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="lib/moment/moment.min.js"></script>
+    <script src="lib/moment/luxon.js"></script>
+    <script src="lib/moment/moment.locales.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
