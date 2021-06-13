@@ -118,6 +118,5 @@ function weatherData() {
       wind5.textContent = 'Wind: ' + dataResult.daily[5].wind_speed + ' m/s';
       humidityEl5.textContent =  'Humidity: ' + dataResult.daily[5].humidity;
       indexEl5.textContent = 'UV Index: ' + dataResult.daily[5].uvi;
-
     });
 }
