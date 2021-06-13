@@ -1,16 +1,5 @@
 // Dynamic Date for top section
 
-var myDate = new  moment().format('L');
-console.log(moment(myDate).format("YYYY-MM-DD HH:mm:ss"));
-console.log("Date: "+moment(myDate).format("YYYY-MM-DD"));
-console.log("Year: "+moment(myDate).format("YYYY"));
-console.log("Month: "+moment(myDate).format("MM"));
-console.log("Month: "+moment(myDate).format("MMMM"));
-console.log("Day: "+moment(myDate).format("DD"));
-console.log("Day: "+moment(myDate).format("dddd"));
-console.log("Time: "+moment(myDate).format("HH:mm")); // Time in24 hour format
-console.log("Time: "+moment(myDate).format("hh:mm A"));
-
 const today = moment();
 const date = today.format("L");
 const userInputedCity = document.getElementById('userInputCity');
