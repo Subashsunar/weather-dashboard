@@ -1,3 +1,4 @@
 {
-    "terminal.integrated.cursorStyle": "underline"
+    "terminal.integrated.cursorStyle": "underline",
+    "liveServer.settings.port": 5502
 }
