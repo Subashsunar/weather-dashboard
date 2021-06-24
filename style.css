@@ -32,7 +32,6 @@ h3 {
 
 .left-section {
   background-color: rgb(191, 224, 247);
-  width: 30%;
   height: auto;
   padding: 10px;
 }
@@ -56,7 +55,6 @@ h3 {
 }
 
 .card .details {
-  margin-top: 65px;
   line-height: 29px;
 }
 
@@ -74,8 +72,8 @@ h3 {
   margin-top: 7px;
   background-color: rgb(2, 6, 36);
   color: white;
-  height: 250px;
-  width: 175px;
+  height: 150px;
+  width: 200px;
   padding-left: 7px;
   padding-top: 3px;
 }
@@ -112,3 +110,13 @@ button:hover {
   margin-top: 10px;
   width: 369px;
 }
+
+.a {
+  display: flex;
+}
+
+.image {
+  width: 18px;
+  height: 18px;
+}
+

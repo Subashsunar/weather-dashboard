@@ -58,7 +58,11 @@ let result5 = document.getElementById("dateToday5");
 result5.textContent = new moment().add(5, "day").format("L");
 
 let weatherIcon = document.getElementById("icon0");
-
+let weatherIcon1 = document.getElementById("icon1");
+let weatherIcon2 = document.getElementById("icon2");
+let weatherIcon3 = document.getElementById("icon3");
+let weatherIcon4 = document.getElementById("icon4");
+let weatherIcon5 = document.getElementById("icon5");
 // Create an input box
 var textEl = document.getElementById("text");
 // Button to submit search
@@ -108,34 +112,53 @@ function weatherData() {
         `http://openweathermap.org/img/wn/${dataResult.current.weather[0].icon}@2x.png`
       );
 
+      weatherIcon1.setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${dataResult.daily[0].weather[0].icon}@2x.png`
+      );
+
+      weatherIcon2.setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${dataResult.daily[1].weather[0].icon}@2x.png`
+      );
+
+      weatherIcon3.setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${dataResult.daily[2].weather[0].icon}@2x.png`
+      );
+
+      weatherIcon4.setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${dataResult.daily[3].weather[0].icon}@2x.png`
+      );
+
+      weatherIcon5.setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${dataResult.daily[4].weather[0].icon}@2x.png`
+      );
+
       temp.textContent = 'Temp: ' + dataResult.current.temp;
       wind.textContent = 'Wind: ' + dataResult.current.wind_speed + ' m/s';
-      humidityEl.textContent =  'Humidity: ' + dataResult.current.humidity;
-      indexEl.textContent = 'UV Index: ' + dataResult.current.uvi;
+      humidityEl.textContent =  'Humidity: ' + dataResult.current.humidit
 
       temp1.textContent = 'Temp: ' + dataResult.daily[1].temp.max;
       wind1.textContent = 'Wind: ' + dataResult.daily[1].wind_speed + ' m/s';
       humidityEl1.textContent =  'Humidity: ' + dataResult.daily[1].humidity;
-      indexEl1.textContent = 'UV Index: ' + dataResult.daily[1].uvi;
 
       temp2.textContent = 'Temp: ' + dataResult.daily[2].temp.max;
       wind2.textContent = 'Wind: ' + dataResult.daily[2].wind_speed + ' m/s';
       humidityEl2.textContent =  'Humidity: ' + dataResult.daily[2].humidity;
-      indexEl2.textContent = 'UV Index: ' + dataResult.daily[2].uvi;
 
       temp3.textContent = 'Temp: ' + dataResult.daily[3].temp.max;
       wind3.textContent = 'Wind: ' + dataResult.daily[3].wind_speed + ' m/s';
       humidityEl3.textContent =  'Humidity: ' + dataResult.daily[3].humidity;
-      indexEl3.textContent = 'UV Index: ' + dataResult.daily[3].uvi;
 
       temp4.textContent = 'Temp: ' + dataResult.daily[4].temp.max;
       wind4.textContent = 'Wind: ' + dataResult.daily[4].wind_speed + ' m/s';
       humidityEl4.textContent =  'Humidity: ' + dataResult.daily[4].humidity;
-      indexEl4.textContent = 'UV Index: ' + dataResult.daily[4].uvi;
 
       temp5.textContent = 'Temp: ' + dataResult.daily[5].temp.max;
       wind5.textContent = 'Wind: ' + dataResult.daily[5].wind_speed + ' m/s';
       humidityEl5.textContent =  'Humidity: ' + dataResult.daily[5].humidity;
-      indexEl5.textContent = 'UV Index: ' + dataResult.daily[5].uvi;
     });
 }
