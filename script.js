@@ -42,8 +42,22 @@ result1.innerHTML = date;
 
 const date1 = today.format('L');
 console.log(date1);
-let result2 = document.getElementById("dateToday1");
-result2.innerHTML = date1;
+let result0 = document.getElementById("dateToday1");
+result0.textContent = new moment().add(1, "day").format("L");
+
+let result2 = document.getElementById("dateToday2");
+result2.textContent = new moment().add(2, "day").format("L");
+
+let result3 = document.getElementById("dateToday3");
+result3.textContent = new moment().add(3, "day").format("L");
+
+let result4 = document.getElementById("dateToday4");
+result4.textContent = new moment().add(4, "day").format("L");
+
+let result5 = document.getElementById("dateToday5");
+result5.textContent = new moment().add(5, "day").format("L");
+
+let weatherIcon = document.getElementById("icon0");
 
 // Create an input box
 var textEl = document.getElementById("text");
@@ -61,7 +75,7 @@ var lon;
 // );
 function cityData() {
   fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?limit=5&q=${textEl.value}&units=metric&appid=${apiKey}`
+    `https://api.openweathermap.org/geo/1.0/direct?limit=5&q=${textEl.value}&units=metric&appid=${apiKey}`
   )
     .then(function (result) {
       return result.json();
@@ -88,6 +102,11 @@ function weatherData() {
 
       // document.querySelector('.icon').src = "https://openweathermap.org/img/wn/" + icon + ".png";
       // document.querySelector('.description').innerHTML = description;
+
+      weatherIcon.setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${dataResult.current.weather[0].icon}@2x.png`
+      );
 
       temp.textContent = 'Temp: ' + dataResult.current.temp;
       wind.textContent = 'Wind: ' + dataResult.current.wind_speed + ' m/s';
